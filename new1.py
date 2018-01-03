@@ -1,2 +1,1 @@
 print ("ben")
-print ("BEN")
