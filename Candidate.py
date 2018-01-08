@@ -3,7 +3,7 @@ import CloudinaryP
 """CreateCv--------------------------------------------------------------------------------------------------------------------------------------------"""
 def CreateCV(name, edu, pic, id, exp):
     data=Json.FetchJson()
-    D = {'Notes':"",'Status': "Under review",'Picture': CloudinaryP.upload(pic, id),'Experience': exp, 'Education': edu,'ID': id,'Name': name}
+    D = {'Review for':"",'Notes':"",'Status': "Under review",'Picture': CloudinaryP.upload(pic, id),'Experience': exp, 'Education': edu,'ID': id,'Name': name}
     data.append(D)
     Json.SaveJason(data)
 

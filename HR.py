@@ -53,13 +53,32 @@ def AddNotes(id,note):
 
     """
     >>> AddNotes(123456789,"TestNotes")
-    Note add to TestName
+    Note added to TestName
     """
 
     data=Json.FetchJson()
     for c in data:
         if (str(id)==str(c['ID'])):
             c["Notes"]=note
-            print ("Note add to "+c['Name'])
+            print ("Note added to "+c['Name'])
 
     Json.SaveJason(data)
+#H3-------------------------------------------------------------------------------------------------------------------------------------------------------
+"""SendToReview-----------------------------------------------------------------------------------------------------------------------------------------"""
+def SendToReview(id,HR_id):
+    data = Json.FetchJson()
+    for c in data:
+        if (str(id) == str(c['ID'])):
+            c["Review for:"] = HR_id
+            print("Review add to" + id)
+    Json.SaveJason(data)
+
+"""ChecktoReview----------------------------------------------------------------------------------------------------------------------------------------"""
+def CheckReview(id):
+    data = Json.FetchJson()
+    for c in data:
+        if (str(id)==str(c['Review for'])):
+            print('Name: {}\nID: {}\nEducation: {}\nExperience: {}\nPicture: {}\nStatus: {}'.format(c['Name'], str(c['ID']),c['Education'],c['Experience'],c['Picture'],c['Status'],end='\n'))
+            if c['Notes']:
+                print  ("Note:",c['Notes'])
+            print('\n')

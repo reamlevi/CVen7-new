@@ -7,7 +7,7 @@ def RegistrationC(username, password):
 
     """
     >>> RegistrationC('AdminC', 1234)
-    This username exist in the system!
+    This username exists in the system!
     False
     """
 
@@ -28,7 +28,7 @@ def RegistrationC(username, password):
         DataEntry()
         return True
     else:
-        print ("This username exist in the system!")
+        print ("This username exists in the system!")
         return False
 
 """RegistrationHR------------------------------------------------------------------------------------------------------------------------------------------"""
@@ -37,7 +37,7 @@ def RegistrationHR(username, password):
 
     """
     >>> RegistrationHR('AdminHR', 1234)
-    This username exist in the system!
+    This username exists in the system!
     False
     """
 
@@ -58,7 +58,7 @@ def RegistrationHR(username, password):
         DataEntry()
         return True
     else:
-        print("This username exist in the system!")
+        print("This username exists in the system!")
         return False
 
 """Login-------------------------------------------------------------------------------------------------------------------------------------------"""
